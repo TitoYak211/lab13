@@ -161,6 +161,10 @@ let odd_for (x : int) : int list =
   done;
   List.rev (!lst_ref) ;;
 
+  let odd_func (limit : int) : int list =
+  List.init limit succ
+  |> List.filter (fun x -> x mod 2 <> 0) ;;
+
 (* Here is the length function implemented using a while loop, as in
 the reading:
 
