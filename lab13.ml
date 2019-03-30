@@ -65,9 +65,9 @@ argument list at all but binding to an anonymous function instead.)
 
 let sum (lst : int list) : int =
   let rec sum_tr lst acc =
-    match lst with 
+    match lst with
     | [] -> acc
-    | hd :: tl -> sum_tr lst (hd + acc) in
+    | hd :: tl -> sum_tr tl (hd + acc) in
   sum_tr lst 0 ;;
 
 (*....................................................................
